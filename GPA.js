@@ -9,11 +9,10 @@ function calcGPA(){
                 let course = courses[x];
 
                 let grade = parseFloat(courses[x].querySelector('.grade').value);
-                let level = parseFloat(courses[x].querySelector('.level').value);
                 let credits = parseFloat(courses[x].querySelector('.credits').value);
 
-                    if (!isNaN(grade) && !isNaN(level) && !isNaN(credits)) {
-                        let fgrade = grade + level;
+                    if (!isNaN(grade) && !isNaN(credits)) {
+                        let fgrade = grade;
                         score += fgrade * credits;
                         creds += credits;
                     }

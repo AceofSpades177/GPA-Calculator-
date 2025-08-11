@@ -208,35 +208,6 @@
         <button type="button" onclick="calcGPA()">Calculate GPA</button>
     </form>
     <p id="result"></p>
-    <script>
-        function calcGPA(){
-            const grades = document.querySelectorAll('.grade');
-            const credits = document.querySelectorAll('.credits');
-            
-            let points=0;
-            let creds=0;
-            for (let x=0; x<grades.length;x++)
-            {
-                const grade = parseFloat(grades[x].value)
-                const credit = parseFloat(credits[x].value)
-                if(!isNaN(grade) && !isNaN(credit)){
-                    points += grade * credit;
-                    creds += credit;
-                }
-            }
-        let gpa;
-        if (creds > 0){
-            gpa = (points/creds).toFixed(2)
-        }
-        else{
-            gpa = "N/A"
-        }
-
-        document.getElementById('result').textContent = "Your GPA: " + gpa;
-
-
-
-    }
-</script>
+    <script src = "GPA.js"></script>
 </body>
 </html>
