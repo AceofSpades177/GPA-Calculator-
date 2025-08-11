@@ -20,5 +20,5 @@ function calcGPA(){
         //Calculate GPA
         let gpa = (creds > 0) ? (score / creds).toFixed(2) : "N/A";
         //Show GPA
-        document.getElementById('result').textContent = "Your GPA: " + gpa;
+        document.getElementById('Unweighted').textContent = "Your GPA: " + gpa;
     }
